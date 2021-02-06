@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\Admin\NoticiaController as AdminNoticiaController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +22,15 @@ Route::get('/',[InicioController::class, "index"]);
 Route::get('/contacto',[InicioController::class, "contacto"]);  
 Route::get('/noticias',[NoticiaController::class, "lista"])->name("noticias");
 Route::get('/noticias/{noticia}',[NoticiaController::class, "detalles"])->name("noticias.detalles");
+
+//Recurso
+//-Crear *Create
+//-Almacenar *Store
+//-Listar *Index
+//-Mostrar detalles *Show
+//Editar *Edit
+//Actualizar *update
+//Eliminar *delete/destroy
+
+Route::get("/admin/noticias", [AdminNoticiaController::class,"index"])->name("admin.noticias.index");
+Route::get("/admin/noticias/create", [AdminNoticiaController::class, "create"])->name("admin.noticias.create");
