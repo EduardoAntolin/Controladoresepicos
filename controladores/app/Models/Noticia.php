@@ -9,8 +9,8 @@ class Noticia extends Model
 {
     use HasFactory;
     //Laravel busca por default una tabla que se llame igual, pero en minusculas
-    //Y con una 's' al final
+    //y con una 's' al final
 
-    //O podemos decirle que tabla queremos
+    //o podemos decirle que tabla queremos
     protected $table = "noticias";
 }

@@ -3,27 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Noticia;
 
 class NoticiaController extends Controller
 {
     public function lista(){
-    $noticias = Noticia::all();
+        $noticias = Noticia::all();
+        
 
-    $argumentos = array();
-    $argumentos["noticia"] = $noticias;
-    return view("noticias.lista", $argumentos);
+        $argumentos = array();
+        $argumentos["noticias"] = $noticias;
 
-
-
-         
+        return view("noticias.lista", $argumentos);
     }
 
     public function detalles($id) {
-        //Simulación de solicitud de detalles de noticia
+        //sistema dew simulacion de detalles de noticia
         $noticia = Noticia::find($id);
+        
 
         $argumentos = array();
-        $argumentos ["noticia"] = $detalles_noticia;
+        $argumentos["noticia"] = $noticia;
+
         return view('noticias.detalles', $argumentos);
     }
 }

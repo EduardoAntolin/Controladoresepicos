@@ -6,7 +6,7 @@
     <title>Mi sistema</title>
 </head>
 <body>
-        <h1>Estás en la pantalla de inicio ananananashe</h1>
-        <p>Este es un párrafo en HTML</p>
+    <h1>Estás en la pantalla de inicio</h1>
+    <p>Este es un párrafo en HTML</p>
 </body>
 </html>
