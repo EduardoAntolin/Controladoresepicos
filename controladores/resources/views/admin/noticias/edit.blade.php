@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Editar noticia {{ $noticia->id }}</title>
-</head>
-<body>
+@extends("layouts.admin")
+@section("contenido_principal")
     <a href="{{ route("admin.noticias.index") }}">Volver a lista de noticias</a>
     @if(Session::has("exito"))
         <p style="color: #1a974e">{{Session::get("exito")}}</p>
@@ -30,5 +23,4 @@
         <input name="foto" type="text" value="{{$noticia->foto}}">
         <button type="submit">Actualizar noticia</button>
     </form>
-</body>
-</html>
+@endsection
